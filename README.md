@@ -13,7 +13,7 @@ wget https://file.ringring.workers.dev/1g
 wget https://file.ringring.workers.dev/500k
 ```
 
-# limit
+# limits
 
 * No transfer speed limit, since it is based on Cloudflare Workers worldwide.
 * No file size limit. The service use stream to generate file internally.
