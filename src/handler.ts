@@ -1,3 +1,5 @@
+import filesizeParser from 'filesize-parser'
+
 // per chunk size should not reach worker's memory limit
 // https://developers.cloudflare.com/workers/platform/limits
 const MAX_CHUNK_SIZE = 1024 * 1024 * 50; // 50MB
@@ -32,5 +34,5 @@ export async function handleRequest(request: Request): Promise<Response> {
 }
 
 function getDesiredSize(pathname: string) {
-  return Number(pathname.slice(1));
+  return filesizeParser(pathname.slice(1));
 }
