@@ -1,6 +1,6 @@
 # description
 
-Generate arbitrary size of file on [Cloudflare Workers](https://workers.cloudflare.com/).
+Generate arbitrary size file on [Cloudflare Workers](https://workers.cloudflare.com/).
 
 You can use this service to test your network download speed.
 
