@@ -1,34 +1,25 @@
 {
-  "name": "pname",
-  "version": "1.0.0",
-  "description": "Cloudflare worker TypeScript template",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack",
-    "dev": "NODE_ENV=development npm run build",
-    "format": "prettier --write '**/*.{ts,js,css,json,md}'",
-    "test:clean": "rimraf ./transpiled/src ./transpiled/test",
-    "test": "npm run test:clean && npm run transpile && mocha --require source-map-support/register --recursive transpiled/test",
-    "transpile": "tsc --project ./test"
-  },
-  "author": "author",
+  "private": true,
+  "type": "module",
   "license": "MIT OR Apache-2.0",
-  "devDependencies": {
-    "@cloudflare/workers-types": "^2.0.0",
-    "@types/chai": "^4.2.11",
-    "@types/filesize-parser": "^1.5.0",
-    "@types/mocha": "^7.0.2",
-    "chai": "^4.2.0",
-    "mocha": "^8.0.1",
-    "prettier": "^2.0.5",
-    "rimraf": "^3.0.2",
-    "service-worker-mock": "^2.0.5",
-    "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+  "scripts": {
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "format": "prettier --write '**/*.{ts,js,css,json,md}'"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   },
   "dependencies": {
-    "filesize-parser": "^1.5.0"
+    "filesize-parser": "^1.5.2",
+    "hono": "^4.13.13"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261023.1",
+    "@types/filesize-parser": "^1.5.3",
+    "prettier": "^3.9.10",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.152.0"
   }
 }

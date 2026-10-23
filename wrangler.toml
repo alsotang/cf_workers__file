@@ -1,7 +1,4 @@
 name = "file"
-type = "webpack"
-account_id = ""
+main = "src/index.ts"
+compatibility_date = "2026-10-23"
 workers_dev = true
-route = ""
-zone_id = ""
-webpack_config = "webpack.config.js"

@@ -8,9 +8,9 @@ You can use this service to test your network download speed.
 
 
 ```bash
-wget https://file.ringring.workers.dev/100m
-wget https://file.ringring.workers.dev/1g
-wget https://file.ringring.workers.dev/500k
+wget https://filedownload.alsotang.com/100m
+wget https://filedownload.alsotang.com/1g
+wget https://filedownload.alsotang.com/500k
 ```
 
 # limits
